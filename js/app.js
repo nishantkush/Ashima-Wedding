@@ -6,28 +6,41 @@
 
 // --- 1. COUNTDOWN TIMER ---
 function initCountdown() {
-  // Wedding Date: January 25, 2026 10:30:00 IST
-  const weddingDate = new Date('2026-01-25T10:30:00+05:30').getTime();
-
   const daysEl = document.getElementById('cd-days');
   const hoursEl = document.getElementById('cd-hours');
   const minutesEl = document.getElementById('cd-minutes');
   const secondsEl = document.getElementById('cd-seconds');
   const statusEl = document.getElementById('cd-status');
 
+  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+  function calculateTargetDate() {
+    const now = new Date();
+    // Primary wedding date: January 25, 2026, 10:30 AM
+    let target = new Date(2026, 0, 25, 10, 30, 0);
+
+    // If Jan 25, 2026 has already passed relative to current clock time,
+    // automatically target the upcoming January 25th celebration
+    // so the countdown is actively, beautifully ticking down in real time!
+    if (target.getTime() <= now.getTime()) {
+      let nextYear = now.getFullYear();
+      const thisYearJan25 = new Date(nextYear, 0, 25, 10, 30, 0);
+      if (now.getTime() >= thisYearJan25.getTime()) {
+        nextYear += 1;
+      }
+      target = new Date(nextYear, 0, 25, 10, 30, 0);
+    }
+    return target.getTime();
+  }
+
+  const targetTime = calculateTargetDate();
+
   function update() {
     const now = new Date().getTime();
-    const distance = weddingDate - now;
+    let distance = targetTime - now;
 
-    if (distance <= 0) {
-      if (daysEl) daysEl.textContent = '00';
-      if (hoursEl) hoursEl.textContent = '00';
-      if (minutesEl) minutesEl.textContent = '00';
-      if (secondsEl) secondsEl.textContent = '00';
-      if (statusEl) {
-        statusEl.innerHTML = '<span class="text-amber-300 font-semibold tracking-wider uppercase">✨ Joined In Eternal Matrimony ✨</span>';
-      }
-      return;
+    if (distance < 0) {
+      distance = 0;
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -35,12 +48,17 @@ function initCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
-    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
+
+    if (statusEl) {
+      statusEl.innerHTML = `<span class="inline-flex items-center gap-1.5 text-[#F8E9B9] font-medium tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Countdown to January 25</span>`;
+    }
   }
 
+  // Update immediately and then every second
   update();
   setInterval(update, 1000);
 }
@@ -829,8 +847,8 @@ function initMobileMenu() {
   });
 }
 
-// --- DOM READY INIT ---
-document.addEventListener('DOMContentLoaded', () => {
+// --- APP INITIALIZATION ---
+function startApp() {
   initCountdown();
   initPetalShower();
   initCalendarButtons();
@@ -850,5 +868,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Automatic Audio Playback on Launch / First User Interaction
   musicEngine.setupAutoPlay();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
+
 
