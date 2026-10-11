@@ -1,0 +1,406 @@
+/* 
+   Royal Indian Palace Wedding Design System
+   Ashima & Arpit • 25th January 2026
+   Palette: Royal Burgundy (#4A121A), Champagne Gold (#D4AF37), Warm Ivory (#FAF6F0)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-burgundy-deep: #2A080E;
+  --color-burgundy: #4A121A;
+  --color-burgundy-light: #671E28;
+  --color-burgundy-card: rgba(42, 8, 14, 0.85);
+  
+  --color-gold: #D4AF37;
+  --color-gold-light: #F7E7B4;
+  --color-gold-dark: #A67C1E;
+  --color-gold-shimmer: linear-gradient(135deg, #FFF0CA 0%, #D4AF37 45%, #9E7416 80%, #F5DF98 100%);
+  
+  --color-ivory: #FAF6F0;
+  --color-ivory-card: #FFFDF9;
+  --color-ivory-muted: #E8E2D7;
+  
+  --font-serif-royal: 'Cinzel', serif;
+  --font-serif-elegant: 'Cormorant Garamond', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-burgundy-deep);
+  color: var(--color-ivory);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background: radial-gradient(circle at 50% 10%, #631923 0%, #4A121A 40%, #2A080E 90%);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-burgundy-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Typography Utilities */
+.font-royal {
+  font-family: var(--font-serif-royal);
+}
+.font-elegant {
+  font-family: var(--font-serif-elegant);
+}
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Gold Text Shimmer */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF3D6 0%, #E6C265 30%, #D4AF37 60%, #997316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #D4AF37 0%, #FFF5D6 50%, #D4AF37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+@keyframes goldShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Jaali / Indian Royal Lattice Pattern */
+.bg-jaali-pattern {
+  background-image: radial-gradient(var(--color-gold-dark) 0.75px, transparent 0.75px), 
+                    radial-gradient(var(--color-gold-dark) 0.75px, #4A121A 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.12;
+}
+
+.bg-mandala-overlay {
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+}
+
+/* Royal Archways & Jharokha Silhouettes */
+.jharokha-arch {
+  clip-path: polygon(
+    0% 100%, 
+    0% 25%, 
+    15% 15%, 
+    35% 8%, 
+    50% 0%, 
+    65% 8%, 
+    85% 15%, 
+    100% 25%, 
+    100% 100%
+  );
+}
+
+.arch-top {
+  border-top-left-radius: 50% 25%;
+  border-top-right-radius: 50% 25%;
+}
+
+/* Gold Border Accents */
+.gold-border-ornate {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  position: relative;
+}
+
+.gold-border-ornate::before,
+.gold-border-ornate::after {
+  content: "❖";
+  position: absolute;
+  color: var(--color-gold);
+  font-size: 11px;
+}
+
+.gold-border-ornate::before {
+  top: -8px;
+  left: -6px;
+}
+.gold-border-ornate::after {
+  bottom: -8px;
+  right: -6px;
+}
+
+/* Royal Ornate Card */
+.royal-card {
+  background: linear-gradient(180deg, rgba(62, 16, 23, 0.95) 0%, rgba(42, 8, 14, 0.98) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 
+              0 0 20px 0 rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royal-card:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.8), 
+              0 0 30px 2px rgba(212, 175, 55, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Ivory Card for high readability */
+.ivory-card {
+  background: var(--color-ivory-card);
+  color: #2D1418;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(212, 175, 55, 0.15);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.ivory-card:hover {
+  box-shadow: 0 18px 45px -8px rgba(0, 0, 0, 0.5), 
+              0 0 25px rgba(212, 175, 55, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Corner Flourishes */
+.corner-flourish {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.corner-tl {
+  top: 6px;
+  left: 6px;
+  border-top: 2px solid var(--color-gold);
+  border-left: 2px solid var(--color-gold);
+}
+.corner-tr {
+  top: 6px;
+  right: 6px;
+  border-top: 2px solid var(--color-gold);
+  border-right: 2px solid var(--color-gold);
+}
+.corner-bl {
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 2px solid var(--color-gold);
+  border-left: 2px solid var(--color-gold);
+}
+.corner-br {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 2px solid var(--color-gold);
+  border-right: 2px solid var(--color-gold);
+}
+
+/* Royal Button */
+.btn-royal-primary {
+  background: linear-gradient(135deg, #F0DB92 0%, #D4AF37 50%, #A3791B 100%);
+  color: #26070B;
+  font-family: var(--font-serif-royal);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #FFEBB0;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-royal-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-royal-primary:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+.btn-royal-primary:hover {
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-royal-secondary {
+  background: rgba(42, 8, 14, 0.6);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold);
+  font-family: var(--font-serif-royal);
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.btn-royal-secondary:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: #F7E7B4;
+  color: #FFF;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Floating Audio Player Disc Animation */
+@keyframes spinDisc {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spinDisc 12s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+/* Audio Wave Visualizer Bars */
+.audio-bar {
+  animation: pulseBar 1.2s ease-in-out infinite alternate;
+}
+.audio-bar:nth-child(2) { animation-delay: 0.2s; }
+.audio-bar:nth-child(3) { animation-delay: 0.4s; }
+.audio-bar:nth-child(4) { animation-delay: 0.15s; }
+
+@keyframes pulseBar {
+  0% { height: 4px; }
+  100% { height: 18px; }
+}
+
+/* Falling Canvas Petals Container */
+#petal-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* Wax Seal Badge */
+.wax-seal {
+  width: 72px;
+  height: 72px;
+  background: radial-gradient(circle at 35% 35%, #8A1C2A 0%, #520F18 70%, #30060C 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 
+              inset 0 2px 4px rgba(255, 255, 255, 0.3),
+              inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px dashed rgba(212, 175, 55, 0.6);
+}
+
+/* Timeline Custom Connectors */
+.timeline-stem {
+  position: relative;
+}
+.timeline-stem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--color-gold) 15%, var(--color-gold) 85%, transparent);
+}
+
+@media (max-width: 768px) {
+  .timeline-stem::before {
+    left: 20px;
+  }
+}
+
+/* Countdown Card */
+.countdown-box {
+  background: linear-gradient(180deg, rgba(74, 18, 26, 0.9) 0%, rgba(38, 7, 11, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Color Swatch Circle */
+.swatch-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.swatch-circle:hover {
+  transform: scale(1.15);
+}
+
+/* Gold Divider with Kalash/Lotus center */
+.ornate-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.ornate-divider::before,
+.ornate-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+/* Fade in scroll animation classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

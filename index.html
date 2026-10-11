@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashima & Arpit's Royal Wedding | 25th January 2026 | AKM Resorts, Zirakpur</title>
+  <meta name="description" content="Together with their families, Ashima & Arpit invite you to celebrate their royal wedding union on Sunday, 25th January 2026 at AKM Resorts, Patiala Road, Zirakpur, Punjab. Digital royal invitation, event itinerary, style guide, and RSVP.">
+  <meta name="theme-color" content="#4A121A">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Ashima & Arpit's Royal Wedding Invitation">
+  <meta property="og:description" content="Celebrate the wedding of Ashima & Arpit • 25th January 2026 • AKM Resorts, Zirakpur">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              DEFAULT: '#4A121A',
+              deep: '#2A080E',
+              dark: '#3A0C13',
+              light: '#6B1B26',
+              border: '#7A222F'
+            },
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F8E9B9',
+              dark: '#A3791B',
+              warm: '#E6C265'
+            },
+            ivory: {
+              DEFAULT: '#FAF6F0',
+              card: '#FFFDF9',
+              muted: '#E8E2D7'
+            }
+          },
+          fontFamily: {
+            royal: ['Cinzel', 'serif'],
+            elegant: ['Cormorant Garamond', 'serif'],
+            script: ['Great Vibes', 'cursive'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#2A080E] text-[#FAF6F0] selection:bg-[#D4AF37] selection:text-[#2A080E]">
+
+  <!-- Falling Marigold & Rose Petals Canvas -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Subtle Royal Jaali Background Overlay -->
+  <div class="fixed inset-0 bg-jaali-pattern pointer-events-none z-0"></div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-[#2A080E]/90 backdrop-blur-md border-b border-[#D4AF37]/30 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Monogram Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center bg-radial from-[#59141F] to-[#2A080E] shadow-[0_0_12px_rgba(212,175,55,0.3)] transition-transform duration-300 group-hover:scale-105">
+          <span class="font-royal font-bold text-base text-[#F8E9B9] tracking-tighter">A & A</span>
+        </div>
+        <div class="hidden sm:block">
+          <p class="font-royal text-sm tracking-[0.2em] text-[#D4AF37] uppercase">Ashima & Arpit</p>
+          <p class="font-elegant text-xs text-[#E8E2D7]/70 italic">25th January 2026</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="#hero" class="text-xs uppercase tracking-widest text-[#FAF6F0]/80 hover:text-[#D4AF37] transition-colors py-1">Invitation</a>
+        <a href="#itinerary" class="text-xs uppercase tracking-widest text-[#FAF6F0]/80 hover:text-[#D4AF37] transition-colors py-1">Itinerary & Style</a>
+        <a href="#venue" class="text-xs uppercase tracking-widest text-[#FAF6F0]/80 hover:text-[#D4AF37] transition-colors py-1">Venue & Travel</a>
+        <a href="#gallery" class="text-xs uppercase tracking-widest text-[#FAF6F0]/80 hover:text-[#D4AF37] transition-colors py-1">Moments</a>
+        <a href="#blessings" class="text-xs uppercase tracking-widest text-[#FAF6F0]/80 hover:text-[#D4AF37] transition-colors py-1">Blessings</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Petals Toggle -->
+        <button id="petal-toggle-btn" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D4AF37]/40 text-xs text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-colors" title="Toggle Falling Petals">
+          <svg class="w-3.5 h-3.5 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C12 2 15 7 15 10C15 12.21 13.21 14 11 14C8.79 14 7 12.21 7 10C7 7 12 2 12 2Z"/>
+            <path d="M17 12C17 12 21 14.5 21 17C21 18.66 19.66 20 18 20C16.34 20 15 18.66 15 17C15 14.5 17 12 17 12Z"/>
+          </svg>
+          <span class="tracking-wider">Petals: On</span>
+        </button>
+
+        <!-- RSVP Header CTA -->
+        <button data-open-rsvp class="btn-royal-primary text-xs px-5 py-2.5 rounded-full shadow-md hover:shadow-lg">
+          RSVP Now
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-[#D4AF37] hover:bg-[#4A121A] transition-colors" aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#2A080E]/98 border-b border-[#D4AF37]/30 px-6 py-6 space-y-4">
+      <a href="#hero" class="mobile-nav-link block font-royal text-sm uppercase tracking-wider text-[#FAF6F0] hover:text-[#D4AF37]">Invitation</a>
+      <a href="#itinerary" class="mobile-nav-link block font-royal text-sm uppercase tracking-wider text-[#FAF6F0] hover:text-[#D4AF37]">Itinerary & Style Guide</a>
+      <a href="#venue" class="mobile-nav-link block font-royal text-sm uppercase tracking-wider text-[#FAF6F0] hover:text-[#D4AF37]">Venue & Logistics</a>
+      <a href="#gallery" class="mobile-nav-link block font-royal text-sm uppercase tracking-wider text-[#FAF6F0] hover:text-[#D4AF37]">Pre-Wedding Moments</a>
+      <a href="#blessings" class="mobile-nav-link block font-royal text-sm uppercase tracking-wider text-[#FAF6F0] hover:text-[#D4AF37]">Blessings Wall</a>
+      <div class="pt-3 border-t border-[#D4AF37]/20 flex gap-3">
+        <button id="btn-google-cal" class="flex-1 btn-royal-secondary text-xs py-2.5 rounded-lg text-center">
+          + Google Cal
+        </button>
+        <button id="btn-download-ics" class="flex-1 btn-royal-secondary text-xs py-2.5 rounded-lg text-center">
+          + Apple .iCal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <main class="relative z-10 pt-20">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="min-h-[92vh] flex flex-col items-center justify-center relative px-4 py-16 sm:py-24 text-center overflow-hidden">
+      
+      <!-- Ornate Rajput Arch Framing Top -->
+      <div class="w-full max-w-4xl mx-auto mb-6 flex items-center justify-center">
+        <div class="ornate-divider max-w-md">
+          <svg class="w-7 h-7 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.5 8.5L21 9.5L16 14L17.5 20.5L12 17L6.5 20.5L8 14L3 9.5L9.5 8.5L12 2Z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Auspicious Vedic Invocation -->
+      <div class="mb-4">
+        <p class="font-serif tracking-[0.25em] text-sm md:text-base text-[#D4AF37] font-semibold">
+          ॥ श्री गणेशाय नमः ॥
+        </p>
+      </div>
+
+      <!-- Royal Intertwined Monogram Crest -->
+      <div class="relative mb-6">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full border-2 border-[#D4AF37] p-1.5 shadow-[0_0_30px_rgba(212,175,55,0.4)] bg-gradient-to-b from-[#671E28] via-[#4A121A] to-[#2A080E] relative flex items-center justify-center">
+          <!-- Outer Ornate Dashed Ring -->
+          <div class="absolute inset-1 rounded-full border border-dashed border-[#F8E9B9]/60 animate-[spin_40s_linear_infinite]"></div>
+          
+          <!-- Intertwined Monogram -->
+          <div class="text-center">
+            <span class="font-royal font-bold text-2xl sm:text-3xl gold-text-gradient tracking-tight">A & A</span>
+            <div class="w-6 h-0.5 bg-[#D4AF37] mx-auto mt-0.5 opacity-80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tagline & Auspicious Request -->
+      <div class="max-w-2xl mx-auto px-4 mb-4">
+        <p class="font-elegant text-xl sm:text-2xl text-[#FAF6F0]/90 italic tracking-wide">
+          Together with their families, invite you to celebrate their union
+        </p>
+      </div>
+
+      <!-- Couple Names with Gold Foil Shimmer -->
+      <div class="mb-5">
+        <h1 class="font-royal text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight gold-text-shimmer leading-tight">
+          Ashima & Arpit
+        </h1>
+      </div>
+
+      <!-- Wedding Date & Venue Callout -->
+      <div class="max-w-2xl mx-auto mb-8 space-y-2">
+        <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#D4AF37]/50 bg-[#4A121A]/70 backdrop-blur-sm">
+          <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span class="font-royal font-semibold text-sm sm:text-base text-[#FAF6F0] tracking-wider uppercase">
+            Sunday, 25th January 2026
+          </span>
+        </div>
+        <p class="font-elegant text-lg sm:text-xl text-[#FAF6F0]/90">
+          AKM Resorts, Patiala Road, Zirakpur, Punjab
+        </p>
+      </div>
+
+      <!-- Hero Visual: Royal Portrait Inside Jharokha Arch Frame -->
+      <div class="w-full max-w-xl mx-auto mb-10 px-4">
+        <div class="relative group rounded-3xl p-3 border-2 border-[#D4AF37]/60 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(212,175,55,0.25)] bg-[#3A0C13]">
+          
+          <!-- Corner Flourishes -->
+          <div class="corner-flourish corner-tl"></div>
+          <div class="corner-flourish corner-tr"></div>
+          <div class="corner-flourish corner-bl"></div>
+          <div class="corner-flourish corner-br"></div>
+
+          <!-- Portrait Image -->
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+            <img 
+              src="assets/images/hero.jpg" 
+              alt="Ashima and Arpit Royal Wedding Portrait" 
+              class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2A080E]/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-left">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold tracking-wider">A Royal Celebration of Love</p>
+                <p class="font-sans text-xs text-[#FAF6F0]/80">Patiala Road, Zirakpur</p>
+              </div>
+              <span class="text-xs bg-[#4A121A]/80 border border-[#D4AF37]/60 text-[#D4AF37] px-2.5 py-1 rounded-full uppercase tracking-widest font-royal">
+                Save The Date
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== COUNTDOWN TIMER ==================== -->
+      <div class="w-full max-w-2xl mx-auto mb-10 px-4">
+        <p class="font-royal text-xs uppercase tracking-[0.25em] text-[#D4AF37] mb-4">
+          Counting Down To The Sacred Vows
+        </p>
+        
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-4 text-center">
+          <!-- Days -->
+          <div class="countdown-box rounded-2xl p-3 sm:p-5">
+            <span id="cd-days" class="block font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-text-gradient">--</span>
+            <span class="block text-[10px] sm:text-xs uppercase tracking-widest text-[#E8E2D7]/70 mt-1">Days</span>
+          </div>
+          <!-- Hours -->
+          <div class="countdown-box rounded-2xl p-3 sm:p-5">
+            <span id="cd-hours" class="block font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-text-gradient">--</span>
+            <span class="block text-[10px] sm:text-xs uppercase tracking-widest text-[#E8E2D7]/70 mt-1">Hours</span>
+          </div>
+          <!-- Minutes -->
+          <div class="countdown-box rounded-2xl p-3 sm:p-5">
+            <span id="cd-minutes" class="block font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-text-gradient">--</span>
+            <span class="block text-[10px] sm:text-xs uppercase tracking-widest text-[#E8E2D7]/70 mt-1">Minutes</span>
+          </div>
+          <!-- Seconds -->
+          <div class="countdown-box rounded-2xl p-3 sm:p-5">
+            <span id="cd-seconds" class="block font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-text-gradient">--</span>
+            <span class="block text-[10px] sm:text-xs uppercase tracking-widest text-[#E8E2D7]/70 mt-1">Seconds</span>
+          </div>
+        </div>
+        
+        <div id="cd-status" class="mt-3 text-xs text-[#D4AF37]/80"></div>
+      </div>
+
+      <!-- Action CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto px-4">
+        <button data-open-rsvp class="w-full sm:w-auto flex-1 btn-royal-primary py-3.5 px-8 rounded-full text-sm font-semibold">
+          RSVP With Joy
+        </button>
+        <a href="#itinerary" class="w-full sm:w-auto flex-1 btn-royal-secondary py-3.5 px-8 rounded-full text-sm font-medium text-center">
+          View Itinerary
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ==================== AUSPICIOUS FAMILY INVITATION SCROLL ==================== -->
+    <section class="max-w-4xl mx-auto px-4 py-12 reveal-on-scroll">
+      <div class="royal-card rounded-3xl p-6 sm:p-10 border border-[#D4AF37]/50 relative text-center">
+        <!-- Corner Flourishes -->
+        <div class="corner-flourish corner-tl"></div>
+        <div class="corner-flourish corner-tr"></div>
+        <div class="corner-flourish corner-bl"></div>
+        <div class="corner-flourish corner-br"></div>
+
+        <div class="w-16 h-16 mx-auto mb-4 wax-seal">
+          <span class="font-royal text-[#F8E9B9] font-bold text-lg">शुभ</span>
+        </div>
+
+        <h2 class="font-royal text-xl sm:text-2xl text-[#D4AF37] font-semibold tracking-wider uppercase mb-4">
+          The Royal Digital Invitation
+        </h2>
+
+        <p class="font-elegant text-xl sm:text-2xl text-[#FAF6F0] leading-relaxed max-w-2xl mx-auto italic mb-6">
+          "Two souls, two families, bound by destiny, love, and sacred tradition. We request the gracious presence of your company to bestow your blessings upon Ashima & Arpit as they begin their eternal journey together."
+        </p>
+
+        <div class="ornate-divider max-w-xs mx-auto mb-6">
+          <span class="text-[#D4AF37] text-xs font-royal">❖ ❖ ❖</span>
+        </div>
+
+        <!-- Quick Calendar & Sharing Links -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
+          <button id="btn-download-ics" class="btn-royal-secondary px-5 py-2.5 rounded-full flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Download .iCal Calendar</span>
+          </button>
+          
+          <button id="btn-google-cal" class="btn-royal-secondary px-5 py-2.5 rounded-full flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+            </svg>
+            <span>Add To Google Calendar</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THE EVENT JOURNEY & STYLE GUIDE ==================== -->
+    <section id="itinerary" class="max-w-5xl mx-auto px-4 py-16 sm:py-24">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-royal font-semibold block mb-2">
+          The Wedding Timeline
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold gold-text-gradient tracking-tight">
+          Event Journey & Style Guide
+        </h2>
+        <div class="ornate-divider max-w-xs mx-auto my-4">
+          <svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3v18m9-9H3"/>
+          </svg>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-[#E8E2D7]/80">
+          A seamless celebration of vibrant auspicious ceremonies and royal evening rituals. Explore event times and curated attire color palettes.
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="space-y-16">
+
+        <!-- ================= EVENT 1: HALDI & CHUDA ================= -->
+        <div class="reveal-on-scroll ivory-card rounded-3xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]/50">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- Event Visual -->
+            <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
+              <img 
+                src="assets/images/haldi.jpg" 
+                alt="Haldi and Chuda Ceremony" 
+                class="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden"></div>
+              
+              <!-- Floating Badge -->
+              <div class="absolute top-4 left-4 bg-[#F59E0B] text-black px-4 py-1.5 rounded-full font-royal font-bold text-xs tracking-wider uppercase shadow-md">
+                Morning Celebration
+              </div>
+            </div>
+
+            <!-- Event Details & Style Guide -->
+            <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+              <div>
+                <!-- Event Header -->
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#D4AF37]/30 pb-4 mb-4">
+                  <div>
+                    <h3 class="font-royal text-2xl sm:text-3xl font-bold text-[#4A121A]">
+                      Haldi & Chuda Ceremony
+                    </h3>
+                    <p class="font-elegant text-base text-[#7A222F] italic">
+                      Auspicious Blessings & Golden Marigold Rites
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <span class="inline-block bg-[#FAF6F0] border border-[#D4AF37] px-3.5 py-1.5 rounded-xl font-royal font-bold text-sm text-[#4A121A]">
+                      10:30 AM Onwards
+                    </span>
+                    <p class="text-xs text-gray-500 mt-1">Sunday, 25th Jan 2026</p>
+                  </div>
+                </div>
+
+                <!-- Venue Info -->
+                <div class="flex items-center gap-2 text-xs font-medium text-gray-700 mb-6">
+                  <svg class="w-4 h-4 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span>Gulmohar Courtyard & Poolside, AKM Resorts</span>
+                </div>
+
+                <p class="font-sans text-sm text-gray-700 leading-relaxed mb-6">
+                  Kickstarting the wedding day with the sacred ritual of turmeric paste, fragrant rose petals, lively folk dhol beats, and the emotional Chuda ceremony.
+                </p>
+
+                <!-- DRESS CODE & STYLE GUIDE -->
+                <div class="bg-[#FAF6F0] rounded-2xl p-5 border border-[#D4AF37]/40 mb-4">
+                  <div class="flex items-center justify-between mb-3">
+                    <h4 class="font-royal text-xs uppercase tracking-widest text-[#4A121A] font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
+                      Dress Code & Style Guide
+                    </h4>
+                    <span class="text-[11px] font-sans font-semibold text-amber-700 uppercase tracking-wider">Sunshine & Marigolds</span>
+                  </div>
+
+                  <!-- Attire Specifics -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-800 mb-4">
+                    <div class="border-l-2 border-[#F59E0B] pl-3">
+                      <p class="font-royal font-bold text-[#4A121A] mb-1">Ladies:</p>
+                      <p class="leading-relaxed">Vibrant yellow, marigold, mustard, lightweight lehengas, or breezy georgette suits with floral jewelry.</p>
+                    </div>
+                    <div class="border-l-2 border-[#D97706] pl-3">
+                      <p class="font-royal font-bold text-[#4A121A] mb-1">Gentlemen:</p>
+                      <p class="leading-relaxed">Pastel or mustard kurta-pajamas, tailored linen shirts, or Nehru jackets with comfortable juttis.</p>
+                    </div>
+                  </div>
+
+                  <!-- Color Palette Chips -->
+                  <div class="pt-3 border-t border-gray-200">
+                    <p class="text-[11px] font-semibold text-gray-600 uppercase tracking-wider mb-2">Recommended Palette Swatches:</p>
+                    <div class="flex items-center gap-3">
+                      <div class="flex items-center gap-1.5" title="Marigold Yellow (#F59E0B)">
+                        <span class="swatch-circle bg-[#F59E0B]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Marigold</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Sunshine (#FDE047)">
+                        <span class="swatch-circle bg-[#FDE047]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Sunshine</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Haldi Ochre (#D97706)">
+                        <span class="swatch-circle bg-[#D97706]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Haldi Ochre</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Ivory Cream (#FFFBEB)">
+                        <span class="swatch-circle bg-[#FFFBEB] border-gray-300"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Ivory Cream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action button for Haldi -->
+              <div class="pt-2 flex justify-end">
+                <a href="#venue" class="text-xs font-royal font-bold text-[#4A121A] hover:text-[#7A222F] flex items-center gap-1.5 group">
+                  <span>View Venue Directions</span>
+                  <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= EVENT 2: ROYAL WEDDING & PHERAS ================= -->
+        <div class="reveal-on-scroll ivory-card rounded-3xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- Event Visual -->
+            <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
+              <img 
+                src="assets/images/wedding.jpg" 
+                alt="Royal Wedding and Pheras Main Event" 
+                class="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden"></div>
+              
+              <!-- Floating Badge -->
+              <div class="absolute top-4 left-4 bg-[#4A121A] text-[#FAF6F0] border border-[#D4AF37] px-4 py-1.5 rounded-full font-royal font-bold text-xs tracking-wider uppercase shadow-md">
+                The Main Event
+              </div>
+            </div>
+
+            <!-- Event Details & Style Guide -->
+            <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+              <div>
+                <!-- Event Header -->
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#D4AF37]/30 pb-4 mb-4">
+                  <div>
+                    <h3 class="font-royal text-2xl sm:text-3xl font-bold text-[#4A121A]">
+                      The Royal Wedding & Pheras
+                    </h3>
+                    <p class="font-elegant text-base text-[#7A222F] italic">
+                      The Sacred Union Under Celestial Stars
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <span class="inline-block bg-[#4A121A] border border-[#D4AF37] px-3.5 py-1.5 rounded-xl font-royal font-bold text-sm text-[#F8E9B9]">
+                      7:00 PM Onwards
+                    </span>
+                    <p class="text-xs text-red-900 font-semibold mt-1">Baraat Swagat: 6:30 PM</p>
+                  </div>
+                </div>
+
+                <!-- Venue Info -->
+                <div class="flex items-center gap-2 text-xs font-medium text-gray-700 mb-6">
+                  <svg class="w-4 h-4 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span>Main Grand Lawn & Royal Banquet, AKM Resorts, Zirakpur</span>
+                </div>
+
+                <p class="font-sans text-sm text-gray-700 leading-relaxed mb-6">
+                  Witness the grand Baraat procession, Varmala exchange under royal floral arches, grand feast, and the sacred seven pheras around the holy Vedic flame.
+                </p>
+
+                <!-- DRESS CODE & STYLE GUIDE -->
+                <div class="bg-[#FAF6F0] rounded-2xl p-5 border border-[#D4AF37]/40 mb-4">
+                  <div class="flex items-center justify-between mb-3">
+                    <h4 class="font-royal text-xs uppercase tracking-widest text-[#4A121A] font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-[#4A121A]"></span>
+                      Dress Code & Style Guide
+                    </h4>
+                    <span class="text-[11px] font-sans font-semibold text-[#7A222F] uppercase tracking-wider">Royal Jewel Tones & Silks</span>
+                  </div>
+
+                  <!-- Attire Specifics -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-800 mb-4">
+                    <div class="border-l-2 border-[#4A121A] pl-3">
+                      <p class="font-royal font-bold text-[#4A121A] mb-1">Ladies:</p>
+                      <p class="leading-relaxed">Regal traditional Indian wear: Silks, Banarasi, ornate Lehengas, or heavy Saris in rich jewel tones with Kundan/Polki jewellery.</p>
+                    </div>
+                    <div class="border-l-2 border-[#D4AF37] pl-3">
+                      <p class="font-royal font-bold text-[#4A121A] mb-1">Gentlemen:</p>
+                      <p class="leading-relaxed">Formal Sherwanis, Bandhgalas, or Indo-Western suits with classic pocket squares & warm stoles.</p>
+                    </div>
+                  </div>
+
+                  <!-- Color Palette Chips -->
+                  <div class="pt-3 border-t border-gray-200">
+                    <p class="text-[11px] font-semibold text-gray-600 uppercase tracking-wider mb-2">Recommended Jewel Tone Swatches:</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                      <div class="flex items-center gap-1.5" title="Deep Royal Burgundy (#4A121A)">
+                        <span class="swatch-circle bg-[#4A121A]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Burgundy</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Champagne Gold (#D4AF37)">
+                        <span class="swatch-circle bg-[#D4AF37]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Champagne Gold</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Emerald Green (#064E3B)">
+                        <span class="swatch-circle bg-[#064E3B]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Emerald</span>
+                      </div>
+                      <div class="flex items-center gap-1.5" title="Royal Navy (#1E3A8A)">
+                        <span class="swatch-circle bg-[#1E3A8A]"></span>
+                        <span class="text-[11px] text-gray-700 font-medium">Royal Navy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action button for Wedding -->
+              <div class="pt-2 flex justify-end">
+                <button data-open-rsvp class="btn-royal-primary text-xs px-6 py-2.5 rounded-full font-bold">
+                  RSVP For Main Event
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== GUEST TRAVEL & VENUE LOGISTICS ==================== -->
+    <section id="venue" class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-royal font-semibold block mb-2">
+          Destination & Directions
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold gold-text-gradient tracking-tight">
+          Venue & Travel Logistics
+        </h2>
+        <div class="ornate-divider max-w-xs mx-auto my-4">
+          <svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-[#E8E2D7]/80">
+          Everything you need for a comfortable journey to AKM Resorts, Patiala Road, Zirakpur.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left Column: Venue Address & Travel Highlights -->
+        <div class="lg:col-span-5 space-y-6 reveal-on-scroll">
+          
+          <!-- Venue Address Card -->
+          <div class="royal-card rounded-3xl p-6 sm:p-8 border border-[#D4AF37]/50">
+            <div class="corner-flourish corner-tl"></div>
+            <div class="corner-flourish corner-br"></div>
+
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-royal text-xl font-bold text-[#F8E9B9]">AKM Resorts</h3>
+                <p class="text-xs text-[#E8E2D7]/70">Zirakpur, Greater Chandigarh</p>
+              </div>
+            </div>
+
+            <div class="border-t border-[#D4AF37]/30 pt-4 mb-6">
+              <p class="font-elegant text-xl text-[#FAF6F0] mb-2 leading-relaxed">
+                AKM Resorts, Patiala Road, near Swastik Vihar, Zirakpur, Punjab 140603
+              </p>
+              <p class="text-xs text-[#E8E2D7]/70 leading-relaxed">
+                Situated along the prime highway corridor with grand gated entrances, expansive palatial lawns, and ample on-site valet parking for all wedding guests.
+              </p>
+            </div>
+
+            <!-- Direct Google Maps Clickable Button -->
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=AKM+Resorts+Patiala+Road+Zirakpur+Punjab" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full btn-royal-primary py-3 px-6 rounded-xl flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+
+          <!-- Travel Distance Highlights -->
+          <div class="royal-card rounded-3xl p-6 border border-[#D4AF37]/40 space-y-4">
+            <h4 class="font-royal text-sm uppercase tracking-widest text-[#D4AF37] font-bold flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Transit Proximity
+            </h4>
+
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-[#2A080E]/80 p-3.5 rounded-xl border border-[#D4AF37]/30">
+                <div class="text-[#D4AF37] font-royal font-bold text-lg mb-0.5">~20 Mins</div>
+                <p class="font-semibold text-[#FAF6F0]">Chandigarh Airport (IXC)</p>
+                <p class="text-[11px] text-gray-400 mt-1">Direct taxi & rideshare connectivity</p>
+              </div>
+
+              <div class="bg-[#2A080E]/80 p-3.5 rounded-xl border border-[#D4AF37]/30">
+                <div class="text-[#D4AF37] font-royal font-bold text-lg mb-0.5">~15 Mins</div>
+                <p class="font-semibold text-[#FAF6F0]">Chandigarh Railway Station</p>
+                <p class="text-[11px] text-gray-400 mt-1">Convenient approach via highway</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-xs text-[#E8E2D7]/80 bg-[#3A0C13]/60 p-3 rounded-lg border border-[#D4AF37]/20">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Complimentary Valet Parking available at Main Resort Portico.</span>
+            </div>
+          </div>
+
+          <!-- Winter Weather Advisory Card -->
+          <div class="royal-card rounded-3xl p-6 border-l-4 border-l-[#D4AF37] border-amber-500/40 relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-500/20 text-[#D4AF37] flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-royal text-sm font-bold text-[#F8E9B9] uppercase tracking-wider mb-1">
+                  Winter Weather Advisory
+                </h4>
+                <p class="font-sans text-xs sm:text-sm text-[#E8E2D7] leading-relaxed">
+                  "January in Zirakpur/Chandigarh brings crisp winter evenings (temperatures around 8°C - 14°C). Please carry warm shawls, stoles, or jackets for outdoor lawn celebrations."
+                </p>
+                <p class="text-[11px] text-[#D4AF37]/90 mt-2 font-medium">
+                  ✦ Outdoor patio heaters, cozy braziers (angithis), and warm Kashmiri Kahwa will be served throughout the evening.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Google Map Embed -->
+        <div class="lg:col-span-7 reveal-on-scroll">
+          <div class="royal-card rounded-3xl p-3 border-2 border-[#D4AF37]/60 overflow-hidden shadow-2xl">
+            <div class="relative w-full h-[480px] rounded-2xl overflow-hidden bg-[#2A080E]">
+              <!-- Responsive Google Maps Iframe centered on AKM Resorts, Patiala Road, Zirakpur -->
+              <iframe 
+                title="AKM Resorts Zirakpur Location Map"
+                src="https://maps.google.com/maps?q=AKM%20Resorts%2C%20Patiala%20Road%2C%20Zirakpur%2C%20Punjab&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-full border-0 filter contrast-105" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <!-- Map Overlay Legend -->
+              <div class="absolute bottom-4 left-4 right-4 bg-[#2A080E]/90 backdrop-blur-md p-4 rounded-xl border border-[#D4AF37]/40 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="font-royal text-xs font-bold text-[#F8E9B9]">AKM Resorts, Patiala Road</p>
+                  <p class="text-[11px] text-[#E8E2D7]/80">Near Swastik Vihar, Zirakpur, Punjab 140603</p>
+                </div>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=AKM+Resorts+Patiala+Road+Zirakpur+Punjab" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="btn-royal-primary text-[11px] px-4 py-2 rounded-lg font-bold uppercase tracking-wider"
+                >
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PHOTO GALLERY / PRE-WEDDING MOMENTS ==================== -->
+    <section id="gallery" class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-royal font-semibold block mb-2">
+          Glimpses Of Romance
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold gold-text-gradient tracking-tight">
+          Pre-Wedding Gallery
+        </h2>
+        <div class="ornate-divider max-w-xs mx-auto my-4">
+          <svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 10l3-4 2 2.5 3-4 3 5H9z"/>
+          </svg>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-[#E8E2D7]/80">
+          Cherished moments, candid laughter, and the royal beginnings of our forever story. Tap any photo to expand into the royal lightbox.
+        </p>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Photo 1: Hero Royal Portrait -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/hero.jpg"
+             data-title="Courtyard Majesty"
+             data-caption="Ashima & Arpit at the royal palace courtyard in traditional wedding attire.">
+          <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+            <img src="assets/images/hero.jpg" alt="Courtyard Majesty" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">Courtyard Majesty</p>
+                <p class="text-xs text-gray-200">Heritage Rajputana Courtyard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Haldi Sunshine Splendor -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/haldi.jpg"
+             data-title="Haldi Rites & Marigold Hues"
+             data-caption="Auspicious turmeric ceremony surrounded by family and blooming marigold garlands.">
+          <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+            <img src="assets/images/haldi.jpg" alt="Haldi Rites" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">Haldi Rites & Marigold Hues</p>
+                <p class="text-xs text-gray-200">Joyful Morning Traditions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Pheras Mandap By Night -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/wedding.jpg"
+             data-title="Sacred Pheras Under The Stars"
+             data-caption="The grand golden floral mandap illuminated on the palace lawn for the Vedic vows.">
+          <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+            <img src="assets/images/wedding.jpg" alt="Sacred Pheras" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">The Royal Mandap</p>
+                <p class="text-xs text-gray-200">Star-lit Wedding Pheras</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Mehndi & Ring Close-Up -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/gallery_mehndi.jpg"
+             data-title="Sacred Promises & Henna"
+             data-caption="Intricate bridal mehndi henna and traditional kundan bangles holding hands.">
+          <div class="relative overflow-hidden rounded-xl aspect-square">
+            <img src="assets/images/gallery_mehndi.jpg" alt="Bridal Mehndi Hands" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">Sacred Promises & Henna</p>
+                <p class="text-xs text-gray-200">Hand in Hand Forever</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5: Twilight Palace Walk -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/gallery_twilight.jpg"
+             data-title="Palace Twilight Romance"
+             data-caption="Romantic laughter on the illuminated heritage balcony overlooking royal fountains.">
+          <div class="relative overflow-hidden rounded-xl aspect-square">
+            <img src="assets/images/gallery_twilight.jpg" alt="Palace Twilight Romance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">Palace Twilight Romance</p>
+                <p class="text-xs text-gray-200">Sunset in Jewel Tones</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6: Radiant Bride Ashima -->
+        <div class="royal-card rounded-2xl overflow-hidden p-2 group cursor-pointer reveal-on-scroll"
+             data-gallery-item
+             data-full-img="assets/images/gallery_bride.jpg"
+             data-title="Radiant Royal Bride"
+             data-caption="Ashima draped in crimson red and antique gold embroidery with Rajasthani Kundan jewels.">
+          <div class="relative overflow-hidden rounded-xl aspect-square">
+            <img src="assets/images/gallery_bride.jpg" alt="Radiant Royal Bride" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div>
+                <p class="font-royal text-sm text-[#F8E9B9] font-bold">The Radiant Bride</p>
+                <p class="text-xs text-gray-200">Heritage Elegance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== RSVP SECTION ==================== -->
+    <section id="rsvp" class="max-w-4xl mx-auto px-4 py-16 sm:py-24">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-royal font-semibold block mb-2">
+          Your Presence Is Our Blessing
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold gold-text-gradient tracking-tight">
+          Répondez S'il Vous Plaît
+        </h2>
+        <div class="ornate-divider max-w-xs mx-auto my-4">
+          <svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-[#E8E2D7]/80">
+          Kindly confirm your attendance by submitting the form below so we may make royal arrangements for your comfort.
+        </p>
+      </div>
+
+      <!-- In-Page RSVP Card -->
+      <div class="royal-card rounded-3xl p-6 sm:p-12 border-2 border-[#D4AF37]/50 relative reveal-on-scroll shadow-2xl">
+        <div class="corner-flourish corner-tl"></div>
+        <div class="corner-flourish corner-tr"></div>
+        <div class="corner-flourish corner-bl"></div>
+        <div class="corner-flourish corner-br"></div>
+
+        <form id="wedding-rsvp-form" class="space-y-6">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Guest Full Name -->
+            <div>
+              <label for="rsvp-guest-name" class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+                Guest Full Name *
+              </label>
+              <input 
+                type="text" 
+                id="rsvp-guest-name" 
+                name="guestName" 
+                required 
+                placeholder="e.g. Dr. Rajesh Sharma & Family"
+                class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-xl px-4 py-3.5 text-sm text-[#FAF6F0] placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
+              />
+            </div>
+
+            <!-- Contact Number -->
+            <div>
+              <label for="rsvp-contact" class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+                Mobile / WhatsApp Number *
+              </label>
+              <input 
+                type="tel" 
+                id="rsvp-contact" 
+                name="contact" 
+                required 
+                placeholder="+91 98765 43210"
+                class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-xl px-4 py-3.5 text-sm text-[#FAF6F0] placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Attendance Choice Radio / Pills -->
+          <div>
+            <label class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+              Will You Be Attending? *
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-[#D4AF37]/40 bg-[#3A0C13]/60 cursor-pointer hover:border-[#D4AF37] transition-colors">
+                <input type="radio" name="attendance" value="Joyfully Accepts" checked class="w-4 h-4 text-amber-500 accent-[#D4AF37]">
+                <div>
+                  <p class="font-royal font-bold text-sm text-[#F8E9B9]">Joyfully Accepts</p>
+                  <p class="text-xs text-gray-400">Can't wait to celebrate together!</p>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-[#D4AF37]/30 bg-[#2A080E]/60 cursor-pointer hover:border-[#D4AF37] transition-colors">
+                <input type="radio" name="attendance" value="Regretfully Declines" class="w-4 h-4 text-amber-500 accent-[#D4AF37]">
+                <div>
+                  <p class="font-royal font-bold text-sm text-gray-300">Regretfully Declines</p>
+                  <p class="text-xs text-gray-400">Celebrating in spirit & sending prayers.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Total Number of Guests -->
+            <div>
+              <label for="rsvp-guest-count" class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+                Total Guests Attending
+              </label>
+              <select 
+                id="rsvp-guest-count" 
+                name="guestCount" 
+                class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-xl px-4 py-3.5 text-sm text-[#FAF6F0] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
+              >
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5+ People (Family Group)</option>
+              </select>
+            </div>
+
+            <!-- Dietary Preferences -->
+            <div>
+              <label for="rsvp-dietary" class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+                Dietary Preferences
+              </label>
+              <select 
+                id="rsvp-dietary" 
+                name="dietary" 
+                class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-xl px-4 py-3.5 text-sm text-[#FAF6F0] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
+              >
+                <option value="Pure Vegetarian" selected>Pure Vegetarian (Traditional Punjabi Feast)</option>
+                <option value="Jain Food">Jain Vegetarian (No onion, garlic, or root vegetables)</option>
+                <option value="Non-Vegetarian">Non-Vegetarian (Mughlai & Punjabi Specialties)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Personal Message / Wishes Box -->
+          <div>
+            <label for="rsvp-message" class="block font-royal text-xs uppercase tracking-wider text-[#D4AF37] font-semibold mb-2">
+              Blessings & Heartfelt Message For Ashima & Arpit
+            </label>
+            <textarea 
+              id="rsvp-message" 
+              name="message" 
+              rows="3" 
+              placeholder="Send your warm wishes, congratulations, or special song request for the DJ!"
+              class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-xl p-4 text-sm text-[#FAF6F0] placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2">
+            <button type="submit" class="w-full btn-royal-primary py-4 rounded-xl text-sm font-bold tracking-widest uppercase shadow-lg">
+              Confirm Royal RSVP
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== BLESSINGS WALL / GUESTBOOK ==================== -->
+    <section id="blessings" class="max-w-5xl mx-auto px-4 py-16 sm:py-24">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-royal font-semibold block mb-2">
+          Wall Of Prayers & Love
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold gold-text-gradient tracking-tight">
+          Heartfelt Blessings
+        </h2>
+        <div class="ornate-divider max-w-xs mx-auto my-4">
+          <svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-[#E8E2D7]/80">
+          Inscribe your blessings for Ashima & Arpit to cherish forever.
+        </p>
+      </div>
+
+      <!-- Wishes List Grid -->
+      <div id="blessings-list" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Quick Wish Submission Card -->
+      <div class="royal-card rounded-2xl p-6 sm:p-8 border border-[#D4AF37]/40 max-w-2xl mx-auto">
+        <h4 class="font-royal text-sm font-bold text-[#F8E9B9] uppercase tracking-wider mb-4 text-center">
+          Inscribe A Blessing On The Royal Wall
+        </h4>
+        <form id="blessings-form" class="space-y-4">
+          <div>
+            <input 
+              type="text" 
+              id="blessing-author" 
+              required 
+              placeholder="Your Name (e.g. Uncle Vikram & Simran Bua)" 
+              class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/30 rounded-xl px-4 py-3 text-xs sm:text-sm text-[#FAF6F0] placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]"
+            />
+          </div>
+          <div>
+            <textarea 
+              id="blessing-text" 
+              required 
+              rows="2" 
+              placeholder="Your warm words and blessings for the bride & groom..." 
+              class="w-full bg-[#2A080E]/90 border border-[#D4AF37]/30 rounded-xl p-4 text-xs sm:text-sm text-[#FAF6F0] placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]"
+            ></textarea>
+          </div>
+          <button type="submit" class="w-full btn-royal-secondary py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
+            Post Blessing
+          </button>
+        </form>
+      </div>
+
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-[#1C0509] border-t border-[#D4AF37]/30 py-16 px-4 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+        
+        <!-- Royal Monogram -->
+        <div class="w-16 h-16 mx-auto rounded-full border border-[#D4AF37] flex items-center justify-center bg-[#4A121A] shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+          <span class="font-royal font-bold text-lg text-[#F8E9B9]">A & A</span>
+        </div>
+
+        <h3 class="font-royal text-2xl sm:text-3xl font-bold gold-text-gradient tracking-wider">
+          Ashima & Arpit
+        </h3>
+
+        <p class="font-elegant text-lg text-[#FAF6F0]/80 italic max-w-lg mx-auto">
+          "With love, laughter, and a happily ever after."
+        </p>
+
+        <p class="font-sans text-xs text-[#E8E2D7]/60 tracking-wider uppercase">
+          AKM Resorts, Patiala Road, Zirakpur, Punjab • 25th January 2026
+        </p>
+
+        <div class="ornate-divider max-w-xs mx-auto pt-4">
+          <span class="text-[#D4AF37] text-xs">❖ ❖ ❖</span>
+        </div>
+
+        <p class="text-[11px] text-[#E8E2D7]/40 pt-4">
+          Crafted with royal affection for Ashima & Arpit's Wedding Celebration.
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==================== BACKGROUND AUDIO ELEMENT ==================== -->
+  <audio id="wedding-audio" loop preload="auto">
+    <source src="assets/audio/wedding_music.mp3" type="audio/mpeg">
+    <source src="assets/audio/wedding_music.m4a" type="audio/mp4">
+    <source src="assets/audio/wedding_music.wav" type="audio/wav">
+    <source src="assets/audio/wedding_music.ogg" type="audio/ogg">
+  </audio>
+
+  <!-- ==================== FLOATING MUSIC PLAYER ==================== -->
+  <aside aria-label="Audio Controls" class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    
+    <!-- Visualizer Wave (When Active) -->
+    <div id="music-wave" class="hidden flex items-end gap-1 h-5 px-2 py-1 bg-[#2A080E]/90 border border-[#D4AF37]/40 rounded-full shadow-lg">
+      <div class="w-1 bg-[#D4AF37] audio-bar rounded-full"></div>
+      <div class="w-1 bg-[#D4AF37] audio-bar rounded-full"></div>
+      <div class="w-1 bg-[#D4AF37] audio-bar rounded-full"></div>
+      <div class="w-1 bg-[#D4AF37] audio-bar rounded-full"></div>
+    </div>
+
+    <!-- Toggle Button with Disc Animation -->
+    <button 
+      id="music-toggle-btn" 
+      class="group relative flex items-center gap-2.5 bg-[#3A0C13] border-2 border-[#D4AF37] rounded-full p-2 pr-4 shadow-[0_8px_25px_rgba(0,0,0,0.7),0_0_15px_rgba(212,175,55,0.3)] hover:scale-105 transition-all duration-300"
+      title="Play Royal Shehnai & Sitar Music"
+      aria-label="Toggle Royal Instrumental Shehnai & Sitar Music"
+    >
+      <!-- Disc Spinner -->
+      <div id="music-disc" class="w-9 h-9 rounded-full bg-radial from-[#D4AF37] via-[#7A222F] to-[#2A080E] border border-[#F8E9B9] flex items-center justify-center spin-slow paused shadow-sm">
+        <svg class="w-4 h-4 text-[#FAF6F0]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+
+      <div class="text-left hidden sm:block">
+        <p id="music-label" class="font-royal text-[11px] font-bold text-[#F8E9B9] uppercase tracking-wider">
+          Play Royal Music
+        </p>
+        <p class="text-[10px] text-[#D4AF37]/70">Shehnai & Sitar</p>
+      </div>
+    </button>
+  </aside>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-8">
+    
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 text-[#FAF6F0] hover:text-[#D4AF37] p-2 z-10 transition-colors" aria-label="Close Lightbox">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Prev Button -->
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-[#FAF6F0] hover:text-[#D4AF37] z-10 bg-black/40 hover:bg-black/80 rounded-full border border-white/20 transition-all" aria-label="Previous Image">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <!-- Next Button -->
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-[#FAF6F0] hover:text-[#D4AF37] z-10 bg-black/40 hover:bg-black/80 rounded-full border border-white/20 transition-all" aria-label="Next Image">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Content Container -->
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center text-center">
+      <div class="relative max-h-[72vh] overflow-hidden rounded-2xl border-2 border-[#D4AF37]/60 shadow-2xl mb-4">
+        <img id="lightbox-img" src="" alt="Ashima and Arpit Wedding Photo" class="max-h-[72vh] w-auto max-w-full object-contain">
+      </div>
+      <div>
+        <h4 id="lightbox-title" class="font-royal text-lg font-bold text-[#F8E9B9]"></h4>
+        <p id="lightbox-desc" class="font-sans text-xs sm:text-sm text-gray-300 max-w-lg mx-auto"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RSVP MODAL ==================== -->
+  <div id="rsvp-modal" class="fixed inset-0 z-50 hidden opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="royal-card w-full max-w-lg rounded-3xl p-6 sm:p-8 border-2 border-[#D4AF37] relative my-auto shadow-2xl">
+      
+      <!-- Close Button -->
+      <button id="close-rsvp-modal" class="absolute top-5 right-5 text-[#FAF6F0] hover:text-[#D4AF37] transition-colors" aria-label="Close RSVP Modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 mx-auto rounded-full border border-[#D4AF37] flex items-center justify-center text-[#F8E9B9] font-royal font-bold text-sm mb-2">
+          A & A
+        </div>
+        <h3 class="font-royal text-2xl font-bold gold-text-gradient">Royal RSVP Confirmation</h3>
+        <p class="text-xs text-gray-300">Sunday, 25th January 2026 • AKM Resorts, Zirakpur</p>
+      </div>
+
+      <p class="text-xs text-center text-gray-300 mb-6">
+        Please let us know if you can join us for this joyous celebration. You can also scroll down to our RSVP form anytime.
+      </p>
+
+      <div class="space-y-4">
+        <a href="#rsvp" onclick="document.getElementById('close-rsvp-modal').click();" class="block w-full btn-royal-primary py-3.5 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
+          Open Full RSVP Form
+        </a>
+        <button id="btn-quick-ics" onclick="document.getElementById('btn-download-ics').click();" class="block w-full btn-royal-secondary py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
+          Download .iCal Calendar Event
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RSVP SUCCESS WAX SEAL MODAL ==================== -->
+  <div id="rsvp-success-modal" class="fixed inset-0 z-50 hidden opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center bg-black/85 backdrop-blur-md p-4">
+    <div class="royal-card w-full max-w-md rounded-3xl p-6 sm:p-10 border-2 border-[#D4AF37] relative text-center shadow-2xl">
+      
+      <div class="w-20 h-20 mx-auto mb-4 wax-seal">
+        <svg class="w-8 h-8 text-[#F8E9B9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+
+      <h3 class="font-royal text-2xl font-bold text-[#F8E9B9] mb-1">
+        Royal RSVP Recorded!
+      </h3>
+      <p class="font-elegant text-lg text-amber-200/90 italic mb-6">
+        "Your presence will add unmatched warmth and grace to our celebrations."
+      </p>
+
+      <div class="bg-[#2A080E]/90 rounded-2xl p-4 border border-[#D4AF37]/30 text-xs text-left space-y-2 mb-6">
+        <div class="flex justify-between border-b border-[#D4AF37]/20 pb-1.5">
+          <span class="text-gray-400">Guest Name:</span>
+          <span id="success-guest-name" class="font-bold text-[#FAF6F0]">Honored Guest</span>
+        </div>
+        <div class="flex justify-between border-b border-[#D4AF37]/20 pb-1.5">
+          <span class="text-gray-400">Party Size:</span>
+          <span id="success-guest-count" class="font-bold text-[#FAF6F0]">2 Guests</span>
+        </div>
+        <div class="flex justify-between border-b border-[#D4AF37]/20 pb-1.5">
+          <span class="text-gray-400">Attendance:</span>
+          <span id="success-status" class="font-bold text-amber-300">Attending with Joy</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-400">Venue:</span>
+          <span class="font-bold text-[#FAF6F0]">AKM Resorts, Zirakpur</span>
+        </div>
+      </div>
+
+      <button id="close-success-modal" class="w-full btn-royal-primary py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest">
+        Done & Explore Itinerary
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/app.js"></script>
+</body>
+</html>
